@@ -2,66 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Target Clicker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gulper.io</title>
   <style>
-    body {
+    * {
       margin: 0;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: #0b0e14;
-      color: #e2e8f0;
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      user-select: none;
+      padding: 0;
+      box-sizing: border-box;
     }
-    #hud {
-      font-size: 24px;
-      margin-bottom: 16px;
-    }
-    #arena {
-      position: relative;
-      width: 500px;
-      height: 360px;
-      background: #141824;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 16px;
+    html, body {
+      width: 100%;
+      height: 100%;
       overflow: hidden;
+      background-color: #0b0e14;
     }
-    #target {
-      position: absolute;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: #d84b6b;
-      cursor: pointer;
-      top: 150px;
-      left: 220px;
-      transition: top 0.08s, left 0.08s;
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
     }
   </style>
 </head>
 <body>
-  <div id="hud">Score: <span id="score">0</span></div>
-  <div id="arena">
-    <div id="target"></div>
-  </div>
-
-  <script>
-    let score = 0;
-    const target = document.getElementById('target');
-    const scoreEl = document.getElementById('score');
-    const arena = document.getElementById('arena');
-
-    target.addEventListener('click', () => {
-      score++;
-      scoreEl.textContent = score;
-      const maxX = arena.clientWidth - target.clientWidth;
-      const maxY = arena.clientHeight - target.clientHeight;
-      target.style.left = Math.floor(Math.random() * maxX) + 'px';
-      target.style.top = Math.floor(Math.random() * maxY) + 'px';
-    });
-  </script>
+  <iframe src="https://gulper.io" allowfullscreen></iframe>
 </body>
 </html>
