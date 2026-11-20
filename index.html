@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Games</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #a1a8b5;
+      /* Dark gradient matching the screenshot */
+      background-color: #0b0e14;
+      background-image:
+        radial-gradient(circle at 18% 85%, rgba(16, 48, 66, 0.75) 0%, transparent 50%),
+        radial-gradient(circle at 88% 18%, rgba(56, 22, 48, 0.65) 0%, transparent 50%),
+        linear-gradient(135deg, #0b0e14 0%, #121622 50%, #1b1523 100%);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      padding: 24px;
+    }
+
+    .game-card {
+      display: block;
+      width: 180px;
+      height: 180px;
+      background-color: rgba(24, 28, 38, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+      cursor: pointer;
+      transition: transform 0.18s ease, border-color 0.18s ease, background-color 0.18s ease;
+    }
+
+    .game-card:hover {
+      transform: translateY(-4px);
+      background-color: rgba(34, 39, 53, 0.95);
+      border-color: rgba(216, 75, 107, 0.55);
+    }
+
+    .game-card:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+<body>
+
+  <main class="grid">
+    <!-- Replace about:blank with your game URLs later (e.g., "games/snake.html") -->
+    <a class="game-card" href="about:blank" target="_blank" rel="noopener noreferrer" aria-label="Game 1"></a>
+    <a class="game-card" href="about:blank" target="_blank" rel="noopener noreferrer" aria-label="Game 2"></a>
+    <a class="game-card" href="about:blank" target="_blank" rel="noopener noreferrer" aria-label="Game 3"></a>
+    <a class="game-card" href="about:blank" target="_blank" rel="noopener noreferrer" aria-label="Game 4"></a>
+  </main>
+
+</body>
+</html>
